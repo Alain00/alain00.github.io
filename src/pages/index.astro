@@ -1,0 +1,20 @@
+---
+import { Cursor } from '@/components/cursor';
+import { Hero } from '@/components/screens/hero';
+import '@/styles/globals.css';
+---
+
+<html lang="en" class="dark" style="color-scheme: dark;">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Portfolio</title>
+	</head>
+	<body class="font-roboto-mono" style={{userSelect: 'none'}}>
+		<Cursor client:load />
+		<main class="max-w-[1200px] mx-auto">
+			<Hero client:load />
+		</main>
+	</body>
+</html>
