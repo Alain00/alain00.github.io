@@ -1,4 +1,5 @@
 import { Vector2 } from "@/utils/vector"
+import { useCursorStore } from "@/zustand/cursor-store"
 import { motion, useMotionValue } from "framer-motion"
 import { forwardRef, useEffect, useImperativeHandle, useRef, useState, type Ref, type RefObject } from "react"
 
@@ -16,7 +17,7 @@ export interface LetterRef {
 export const Letter = forwardRef<LetterRef, LetterProps>(({
   children
 }, ref) => {
-
+  const cursorStore = useCursorStore();
   // const [lastKnowMousePosition, setLastKnowMousePosition] = useState<Vector2>(new Vector2(0, 0))
   const container = useRef<HTMLSpanElement>(null)
   const positionX = useMotionValue(0)
@@ -46,7 +47,7 @@ export const Letter = forwardRef<LetterRef, LetterProps>(({
       const distance = Vector2.distance(containerPostion, lastKnowMousePosition)
 
 
-      const shouldFlick = true
+      const shouldFlick = cursorStore.state !== 'full-expand'
       const randomValue = shouldFlick ? (Math.random() * 0.5) : 0
       let actualPosition = new Vector2(
         randomValue * distance/(window.innerWidth/10),
@@ -74,7 +75,7 @@ export const Letter = forwardRef<LetterRef, LetterProps>(({
       document.body.removeEventListener('mousemove', onMouseMove)
       cancelAnimationFrame(requestId.current ?? 0)
     }
-  }, [])
+  }, [cursorStore.state])
 
 
   const destroy = () => {

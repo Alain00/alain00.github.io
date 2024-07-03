@@ -2,7 +2,7 @@ import { Face } from "../face"
 import { LettersTransformer } from "../letters-transformer"
 import { LightBulb } from "../light-bulb"
 import { Tech } from "../tech"
-
+import {MailIcon} from 'lucide-react'
 
 export const Hero = () => {
   return (
@@ -24,7 +24,8 @@ export const Hero = () => {
 					</div>
 
 					<div className="mt-6">
-						<a className="font-pixel text-invisible hover:text-background/50" href="emailto:alain00.alvarez@gmail.com">
+						<a className="font-pixel text-invisible hover:text-background/80" href="emailto:alain00.alvarez@gmail.com">
+							<MailIcon className="w-5 h-5 inline-block mr-2" />
 							alain00.alvarez@gmail.com
 						</a>
 					</div>
