@@ -24,18 +24,20 @@ export const Hero = () => {
 					</div>
 
 					<div className="mt-6">
-						<a className="font-pixel text-invisible hover:text-background/80" href="emailto:alain00.alvarez@gmail.com">
+						<a className="font-pixel text-invisible hover:text-background/80" href="mailto:alain00.alvarez@gmail.com">
 							<MailIcon className="w-5 h-5 inline-block mr-2" />
 							alain00.alvarez@gmail.com
 						</a>
 					</div>
 
-					<div className="flex justify-center gap-12 mt-12">
+					<div className="flex gap-12 mt-12 grid grid-cols-4 justify-center items-center place-items-center">
 						<Tech type="docker" />
 						<Tech type="nestjs" />
 						<Tech type="nextjs" />
 						<Tech type="nodejs" />
-						<Tech type="kubernetes" />
+						<div />
+						<Tech type="react" />
+						<Tech type="typescript" />
 					</div>
 
 					<div className="mt-12">

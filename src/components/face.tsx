@@ -87,6 +87,5 @@ export const Face = ({}: FaceProps) => {
           id="path1" />
       </g>
     </svg>
-
   )
 }
