@@ -6,6 +6,15 @@ import { Hero } from '@/components/screens/hero';
 
 <html lang="en" class="dark" style="color-scheme: dark;">
 	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-D28338XVLT"></script>
+		<script is:raw is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-D28338XVLT');			
+		</script>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
