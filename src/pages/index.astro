@@ -2,6 +2,9 @@
 import '@/styles/globals.css';
 import { Cursor } from '@/components/cursor';
 import { Hero } from '@/components/screens/hero';
+import { FeedbackButton } from '@/components/feedback-button';
+import { FeedbackModal } from '@/components/feedback-modal';
+import { FeedbackAnalytics } from '@/components/feedback-analytics';
 ---
 
 <html lang="en" class="dark" style="color-scheme: dark;">
@@ -25,5 +28,8 @@ import { Hero } from '@/components/screens/hero';
 		<main class="max-w-[1200px] mx-auto">
 			<Hero client:load />
 		</main>
+		<FeedbackButton client:load />
+		<FeedbackModal client:load />
+		<FeedbackAnalytics client:load />
 	</body>
 </html>
